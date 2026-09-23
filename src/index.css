@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', 'Newsreader', Georgia, serif;
+    --font-display: 'Cinzel', 'Cormorant Garamond', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #120f0d;
+    color: #ede6d6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: var(--font-serif);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* 1990s Analog Film Grain Simulation */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+/* Aged Paper Parchment Texture */
+.parchment-texture {
+  background-color: #f7f2e7;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(214, 196, 163, 0.15) 0%, rgba(186, 164, 127, 0.3) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Antique Gilded Picture Frame Styling */
+.museum-frame {
+  box-shadow: 
+    0 10px 30px -5px rgba(0, 0, 0, 0.8),
+    0 25px 60px -15px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 3px #45341f,
+    inset 0 0 0 7px #9a7837,
+    inset 0 0 0 11px #332313,
+    inset 0 0 0 14px #c9a552,
+    inset 0 0 18px 4px rgba(0,0,0,0.7);
+  border: 12px solid #573f22;
+  border-image: linear-gradient(135deg, #7c5c2d 0%, #3a2814 25%, #9e7939 50%, #4a341a 75%, #b58d42 100%) 12;
+}
+
+.museum-frame-inner {
+  box-shadow: 
+    inset 0 0 20px rgba(0, 0, 0, 0.8),
+    0 0 0 4px #1a140d,
+    0 0 0 6px #785a26;
+}
+
+/* Antique Engraved Brass Plaque */
+.brass-plaque {
+  background: linear-gradient(135deg, #e4c575 0%, #b89139 30%, #876521 70%, #d4b25e 100%);
+  color: #1f180c;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid #735418;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.brass-plaque-dark {
+  background: linear-gradient(145deg, #2a2216 0%, #1a140d 100%);
+  border: 1px solid #8e7238;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(212, 178, 94, 0.25);
+}
+
+/* Realistic Polished Parquet Flooring */
+.parquet-floor {
+  background-color: #21160e;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 20px, rgba(0,0,0,0.08) 20px, rgba(0,0,0,0.08) 40px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 20px, rgba(0,0,0,0.08) 20px, rgba(0,0,0,0.08) 40px),
+    linear-gradient(180deg, #18100a 0%, #2e2015 50%, #150d07 100%);
+  background-size: 80px 80px, 80px 80px, 100% 100%;
+}
+
+/* 3D Perspective & Room Space */
+.museum-viewport {
+  perspective: 1100px;
+  perspective-origin: 50% 48%;
+}
+
+.room-spatial-container {
+  transform-style: preserve-3d;
+  transition: transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Ceiling Ambient Spotlight Glow */
+.spotlight-cone {
+  background: radial-gradient(ellipse at 50% 0%, rgba(254, 243, 199, 0.35) 0%, rgba(245, 158, 11, 0.12) 40%, rgba(18, 15, 13, 0) 75%);
+}
+
+.soft-wall-lighting {
+  background: radial-gradient(circle at 50% 30%, rgba(255, 237, 213, 0.14) 0%, rgba(28, 21, 16, 0.85) 85%);
+}
+
+/* Custom Scrollbar for Catalogue */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #191410;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a3826;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #785a38;
+}

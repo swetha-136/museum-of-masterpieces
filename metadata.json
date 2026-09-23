@@ -1,0 +1,6 @@
+{
+  "name": "Virtual Art Museum - 1990s Curatorial Experience",
+  "description": "An atmospheric, vintage 3D virtual art museum. Explore iconic masterpieces across Renaissance, Impressionism, Post-Impressionism, Modern Art, and Indian Art with authentic archival catalogues and curatorial plaques.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
